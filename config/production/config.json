@@ -1,21 +1,21 @@
 {
   "app_name" : "user_rpc",
-  "app_host" : "http://www.52db.club:8888",
+  "app_host" : "http://127.0.0.1:8888",
   "app_port" : "8888",
 
   "log" : {
     "access_log_file_path" : "../log",
     "access_log_file_name" : "access.log",
     "print_to_std" : false,
-    "app_log_mysql_host": "139.224.132.234",
-    "app_log_mysql_port": "30306",
+    "app_log_mysql_host": "127.0.0.1",
+    "app_log_mysql_port": "3306",
     "app_log_mysql_db_name": "user",
     "app_log_mysql_table_name": "us_app_log",
-    "app_log_mysql_user": "myuser",
-    "app_log_mysql_pass": "myuser",
+    "app_log_mysql_user": "user",
+    "app_log_mysql_pass": "user",
     "log_with_rabbitmq": true,
     "rabbimq":{
-      "url": "amqp://guest:guest@139.224.132.234:31001/",
+      "url": "amqp://guest:guest@127.0.0.1:5672/",
       "routingKey": "log_go_user_rpc",
       "exchange": "log"
     }
@@ -23,22 +23,22 @@
 
   "consul" :{
     "open": false,
-    "consul_address": "139.224.132.234",
+    "consul_address": "127.0.0.1",
     "service_name": "Health",
-    "service_ip": "139.224.132.234",
+    "service_ip": "127.0.0.1",
     "tags": ["unique"],
     "service_port": 8888,
-    "consul_server_addr": "139.224.132.234:8500",
+    "consul_server_addr": "127.0.0.1:8500",
     "token": "xxtl",
     "scheme": "http",
     "dataCenter": "dc1"
   },
 
   "database": {
-    "username": "myuser",
-    "password": "myuser",
-    "host": "139.224.132.234",
-    "port": 30306,
+    "username": "user",
+    "password": "user",
+    "host": "127.0.0.1",
+    "port": 3306,
     "dbname": "user",
     "log_mode": true,
     "max_open_connection": 10,
@@ -46,8 +46,8 @@
   },
 
   "redis" : {
-    "host": "139.224.132.234",
-    "port": "32379",
+    "host": "127.0.0.1",
+    "port": "6379",
     "password": "myredis",
     "db": 0,
     "prefix": "us_redis_"

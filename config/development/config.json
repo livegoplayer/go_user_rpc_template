@@ -7,15 +7,15 @@
     "access_log_file_path" : "../log",
     "access_log_file_name" : "access.log",
     "print_to_std" : true,
-    "app_log_mysql_host": "139.224.132.234",
-    "app_log_mysql_port": "30306",
+    "app_log_mysql_host": "127.0.0.1",
+    "app_log_mysql_port": "3306",
     "app_log_mysql_db_name": "user",
     "app_log_mysql_table_name": "us_app_log",
     "app_log_mysql_user": "myuser",
     "app_log_mysql_pass": "myuser",
     "log_with_rabbitmq": false,
     "rabbimq":{
-      "url": "amqp://guest:guest@139.224.132.234:5670/",
+      "url": "amqp://guest:guest@127.0.0.1:5670/",
       "routingKey": "log_go_user",
       "exchange": "log"
     }
@@ -23,12 +23,12 @@
 
   "consul" :{
     "open": false,
-    "consul_address": "139.224.132.234",
+    "consul_address": "127.0.0.1",
     "service_name": "user_rpc",
-    "service_ip": "139.224.132.234",
+    "service_ip": "127.0.0.1",
     "tags": ["unique"],
     "service_port": 8888,
-    "consul_server_addr": "139.224.132.234:8300",
+    "consul_server_addr": "127.0.0.1:8300",
     "token": "xxtl",
     "scheme": "tcp",
     "dataCenter": "dc1"
@@ -37,7 +37,7 @@
   "database": {
     "username": "myuser",
     "password": "myuser",
-    "host": "139.224.132.234",
+    "host": "127.0.0.1",
     "port": 3306,
     "dbname": "user",
     "log_mode": true,
@@ -46,8 +46,8 @@
   },
 
   "redis" : {
-    "host": "139.224.132.234",
-    "port": "32379",
+    "host": "127.0.0.1",
+    "port": "6379",
     "password": "myredis",
     "db": 0,
     "prefix": "us_redis_"
